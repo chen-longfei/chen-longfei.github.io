@@ -1,2 +1,2 @@
 # longfeichen.github.io
-Long-Fei Chen's personal page
+CHEN Longfei's personal page
