@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longfei Chen - Academic Profile</title>
+    <title>Longfei Chen - Computer Vision & ML Researcher</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -11,6 +11,7 @@
             --text-color: #333;
             --bg-color: #f4f7f6;
             --white: #ffffff;
+            --light-gray: #eee;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,11 +23,11 @@
         header {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
         }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem; }
         
         .container {
             max-width: 1000px;
@@ -36,233 +37,60 @@
         
         .profile-section {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             background: var(--white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
+            margin-top: -3rem;
         }
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             background-color: #ddd; 
             object-fit: cover;
-            margin-right: 2rem;
+            margin-right: 2.5rem;
             flex-shrink: 0;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         
-        h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-top: 2rem; }
-        h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+        h2 { 
+            color: var(--primary-color); 
+            border-bottom: 2px solid var(--accent-color); 
+            padding-bottom: 0.5rem; 
+            margin-top: 2.5rem; 
+            font-size: 1.8rem;
+        }
+        h3 { color: var(--primary-color); margin-bottom: 0.2rem; font-size: 1.2rem; }
+        .subtitle { font-style: italic; color: #666; margin-bottom: 1rem; font-size: 0.95rem; }
         
         .btn {
             display: inline-block;
             background: var(--accent-color);
             color: var(--white);
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             text-decoration: none;
             border-radius: 4px;
             margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
             font-size: 0.9rem;
             border: none;
             cursor: pointer;
+            transition: background 0.3s;
         }
         .btn:hover { background-color: #2980b9; }
         
-        .paper, .project {
+        .card {
             background: var(--white);
             padding: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             border-radius: 6px;
             border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .news-item { margin-bottom: 0.5rem; }
-        .date { font-weight: bold; color: var(--accent-color); margin-right: 0.5rem; }
-        
-        .tags { font-size: 0.85rem; color: #666; margin-top: 0.5rem; }
-        .tag { background: #eee; padding: 2px 6px; border-radius: 4px; margin-right: 5px; }
-
-        /* CONTACT FORM STYLES */
-        .contact-form {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .form-group { margin-bottom: 1rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
-            box-sizing: border-box; 
-        }
-        .form-group textarea { height: 120px; resize: vertical; }
-
-        /* MAP STYLES */
-        .map-container {
-            text-align: center;
-            margin-top: 2rem;
-            background: var(--white);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .profile-section { flex-direction: column; text-align: center; }
-            .profile-img { margin-right: 0; margin-bottom: 1rem; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="container">
-        <h1>Longfei Chen</h1>
-        <p>Researcher</p>
-    </div>
-</header>
-
-<div class="container">
-    
-    <div class="profile-section">
-        <img src="profile1.jpg" alt="Longfei Chen" class="profile-img">
-        <div>
-            <h2>About Me</h2>
-            <p>
-                I am currently a visitor at the School of Informatics, <strong>University of Edinburgh</strong>. 
-                Previously, I was a Research Associate at the Advanced Care Research Centre (ACRC) & School of Informatics, University of Edinburgh (2021–2025). 
-                I hold a PhD in Engineering from <strong>Kyoto University</strong> (2020).
-            </p>
-            <p>
-                I specialize in <strong>Computer (Egocentric) Vision</strong>, <strong>Statistical Learning (Temporal Modeling)</strong>, and <strong>Human Behavior Analysis</strong>.
-            </p>
-            <div style="margin-top: 1rem;">
-                <a href="#contact" class="btn">Contact Me</a>
-                <a href="https://scholar.google.com/citations?user=v4iEtbEAAAAJ&hl=zh-CN" class="btn" target="_blank">Google Scholar</a>
-                <a href="Longfei_CV_short_version_3_page.pdf" class="btn" target="_blank">Curriculum Vitae</a>
-            </div>
-        </div>
-    </div>
-
-
-    <h2>Research Projects</h2>
-    
-    <div class="project">
-        <h3>Vision-Based Human Physical Behavior Analysis for Potential Health Conditions (2021–2025)</h3>
-        <p><em>University of Edinburgh</em></p>
-        <p>
-            Developed privacy-preserving methods to support independent living for older adults in homes. 
-            My work utilized RGB-D imaging, activity recognition (CNN, VAE, RNN/LSTM), behavior analysis (fine-grained body movement features), and temporal modeling (Bayesian Networks, Gaussian Processes) to infer changes in health state in domestic environments. 
-            Key contributions include handling real-world challenges like low lighting and moving pets to reliably detect inactivity, and modeling temporal variances for detecting subtle functional decline.
-        </p>
-        <div class="tags">
-            <span class="tag">Healthcare</span> <span class="tag">Temporal Modeling</span> <span class="tag">Physical Behavior</span>
-        </div>
-    </div>
-
-    <div class="project">
-        <h3>Analysis and Modeling of Machine Operation Tasks using Egocentric Vision (2015–2020)</h3>
-        <p><em>Kyoto University (PhD Thesis)</em></p>
-        <p>
-            Investigated operational behaviors using head-mounted cameras, IMUs, and gaze trackers. I developed methods for <strong>touch sensing</strong> and <strong>hotspot detection</strong>, 
-            and applied <strong>Modified Hidden Markov Models</strong> to model complex task sequences (repetitive, mistakes, new ways, degree of freedom) for automatic guidance systems and user skill assessment.
-        </p>
-        <div class="tags">
-            <span class="tag">Egocentric Vision</span> <span class="tag">HMMs</span> <span class="tag">RGB-D</span>
-        </div>
-    </div>
-
-    <h2>Selected Publications</h2>
-    
-    <div class="paper">
-        <strong>Evaluating Personalised Beneficial Interventions in the Daily Lives of Older Adults Using a Camera</strong><br>
-        <em>Chen Long-fei, Christopher Lochhead, Robert B. Fisher, et al.</em><br>
-        International Conference on AI in Healthcare (AliH), 2025.<br>
-    </div>
-
-    <div class="paper">
-        <strong>Unobtrusive Monitoring of Physical Weakness: A Simulated Approach</strong><br>
-        <em>Chen Long-fei, Muhammad Ahmed Raza, Robert B. Fisher, et al.</em>
-        <a href="#" style="font-size:0.9rem;">[arXiv:2406.10045]</a>
-    </div>
-
-    <div class="paper">
-        <strong>Measuring Changes in Upper Body Movement Due to Fasting Using a Camera</strong><br>
-        <em>Chen Long-fei, et al.</em><br>
-        Sensors, 24(22): 7242, 2024.<br>
-    </div>
-
-    <div class="paper">
-        <strong>MISO: Monitoring Inactivity of Single Older Adults at Home using RGB-D Technology</strong><br>
-        <em>Chen Long-fei, Robert B. Fisher</em><br>
-        ACM Transactions on Computing for Healthcare, 2024.<br>
-    </div>
-
-    <h2>Open Source Datasets</h2>
-    <div class="paper">
-        <strong>Human MotionLess (HuMoLs) Dataset</strong><br>
-        A real-world dataset containing human subjects who are motionless, used for detecting inactivity or loss of consciousness.<br>
-        <a href="https://groups.inf.ed.ac.uk/vision/DATASETS/HUMOLS/" target="_blank">View Dataset</a>
-    </div>
-    <div class="paper">
-        <strong>Edinburgh Simulated Surgical Tools (RGBD)</strong><br>
-        A synthetic dataset with 2D/3D surgical tools for object recognition and pose estimation.<br>
-        <a href="https://homepages.inf.ed.ac.uk/rbf/SURGICALTOOLS/" target="_blank">View Dataset</a>
-    </div>
-
-
-
-    <h2>News & Updates</h2>
-    <div class="paper">
-        <div class="news-item">
-        <span class="date">Sep 2025</span> 
-        📄 Paper nominated for <strong>Best Paper Candidate</strong> at the Int. Conference on AI in Healthcare, Cambridge.
-        </div>
-        <div class="news-item">
-            <span class="date">May 2025</span> 
-            🏆 Won <strong>Best Presentation Award</strong> at the AI and Dementia International Workshop, Toronto.
-        </div>
-        <div class="news-item">
-            <span class="date">2024</span> 
-            💰 Awarded <strong>Wellcome Institutional Partnership Award</strong> (£5k).
-        </div>
-    </div>
-
-    
-    <h2 id="contact">Leave a Message</h2>
-    <div class="contact-form">
-        <form action="https://formspree.io/f/movgovbj" method="POST">
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="name@example.com" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Research Collaboration / Question" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
-
-    <h2 style="text-align:center;">Visitor Map</h2>
-    <div class="map-container">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=u-xivdBpKfmIttoJWRsWhs34CMgZ1Hp_26LUlCUvI-M"></script>
-    </div>
-
-</div> <footer>
-    <p>&copy; 2025 Longfei Chen. Hosted on GitHub Pages.</p>
-</footer>
-
-</body>
-</html>
+        .news-item { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--light-gray); }
+        .news-item:last-child { border-bottom
