@@ -93,4 +93,249 @@
         }
         
         .news-item { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--light-gray); }
-        .news-item:last-child { border-bottom
+        .news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .date { font-weight: bold; color: var(--accent-color); margin-right: 0.5rem; display: inline-block; width: 80px; }
+        
+        /* SKILLS STYLES */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skill-badge {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .skill-badge.tool { background: #7f8c8d; }
+
+        .tags { font-size: 0.85rem; color: #666; margin-top: 0.8rem; }
+        .tag { background: var(--light-gray); padding: 3px 8px; border-radius: 4px; margin-right: 5px; font-weight: 500; }
+
+        /* CONTACT FORM STYLES */
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--primary-color); }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box; 
+        }
+        .form-group textarea { height: 120px; resize: vertical; }
+
+        /* MAP STYLES */
+        .map-container {
+            text-align: center;
+            margin-top: 2rem;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .profile-section { flex-direction: column; text-align: center; align-items: center; margin-top: 0; }
+            .profile-img { margin-right: 0; margin-bottom: 1.5rem; }
+            header { padding: 2rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Longfei Chen, PhD</h1>
+        <p>Computer Vision & Machine Learning Researcher</p>
+    </div>
+</header>
+
+<div class="container">
+    
+    <div class="profile-section">
+        <img src="profile1.jpg" alt="Longfei Chen" class="profile-img">
+        <div>
+            <h2 style="margin-top: 0; border: none; padding: 0;">About Me</h2>
+            <p>
+                I am a passionate researcher specializing in <strong>Computer Vision, Statistical Learning (Temporal Modeling), and Human Behavior Analysis</strong>. Currently, I am a visitor at the School of Informatics, <strong>University of Edinburgh</strong>, having previously served as a Postdoctoral Research Associate (2021–2025). I earned my PhD in Electrical Engineering from <strong>Kyoto University</strong> in 2020.
+            </p>
+            <p>
+                My work centers on vision-based physical behavior analysis, edge-computing deployment, and multimodal data integration. I am driven by the challenge of developing privacy-preserving AI to support healthcare and independent living. I am multilingual (fluent in English, Chinese, and Japanese) and actively seeking opportunities to bring my expertise in deep learning and statistical modeling to innovative teams.
+            </p>
+            <div style="margin-top: 1.5rem;">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="https://scholar.google.com/citations?user=v4iEtbEAAAAJ&hl=zh-CN" class="btn" target="_blank">Google Scholar</a>
+                <a href="Longfei_CV_short_version_3_page.pdf" class="btn" target="_blank">Download CV</a>
+                <a href="https://github.com/your-github-profile" class="btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="card" style="border-left: none;">
+        <div class="skills-container">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C/C++</span>
+            <span class="skill-badge">MATLAB</span>
+            <span class="skill-badge">Swift (iOS)</span>
+            <span class="skill-badge">Java (Android)</span>
+            <span class="skill-badge tool">PyTorch</span>
+            <span class="skill-badge tool">CNN / RNN / VAE / LSTM</span>
+            <span class="skill-badge tool">Gaussian Processes</span>
+            <span class="skill-badge tool">Hidden Markov Models (HMMs)</span>
+            <span class="skill-badge tool">Jetson Nano & Raspberry Pi</span>
+            <span class="skill-badge tool">RGB-D & Egocentric Vision</span>
+        </div>
+    </div>
+
+    <h2>Experience & Education</h2>
+    <div class="card">
+        <h3>University of Edinburgh</h3>
+        <div class="subtitle">Visitor & Postdoctoral Research Associate | 2021 – Present</div>
+        <p>Developing computer vision and machine learning algorithms for in-home monitoring of older adults. Deployed edge devices, modeled physical weakness using Bayesian Networks, and utilized deep learning (CNNs, LSTM, VAE) and statistical testing for temporal health analysis.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Kyoto University</h3>
+        <div class="subtitle">PhD in Electrical Engineering | 2015 – 2020</div>
+        <p>Dissertation: <em>Analysis and Modeling of Machine Operation Tasks Using Egocentric Vision</em>. Developed methods for touch sensing, hotspot detection, and complex task sequence modeling using modified Hidden Markov Models and dynamic alignment.</p>
+    </div>
+
+    <div class="card">
+        <h3>Sichuan University</h3>
+        <div class="subtitle">Master of Engineering, Control Theory and Engineering | 2011 – 2014</div>
+        <p>Focused on computer-vision-based video denoising, image processing, compressed sensing, and low-rank methods.</p>
+    </div>
+
+    <h2>Featured Research Projects</h2>
+    
+    <div class="card">
+        <h3>Vision-Based Human Physical Behavior Analysis for Health Conditions (2021–2025)</h3>
+        <p>
+            Developed privacy-preserving methods to support independent living for older adults in homes. My work utilized RGB-D imaging, activity recognition, behavior analysis, and temporal modeling (Bayesian Networks, Gaussian Processes) to infer changes in health states. Key contributions include handling real-world challenges like low lighting and moving pets to reliably detect inactivity and subtle functional decline.
+        </p>
+        <div class="tags">
+            <span class="tag">Healthcare AI</span> <span class="tag">Temporal Modeling</span> <span class="tag">Edge Computing</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Analysis and Modeling of Machine Operation Tasks using Egocentric Vision (2015–2020)</h3>
+        <p>
+            Investigated operational behaviors using head-mounted cameras, IMUs, and gaze trackers. I developed methods for <strong>touch sensing</strong> and <strong>hotspot detection</strong>, and applied <strong>Modified Hidden Markov Models</strong> to model complex task sequences (repetitive, mistakes, new ways) for automatic guidance systems and user skill assessment.
+        </p>
+        <div class="tags">
+            <span class="tag">Egocentric Vision</span> <span class="tag">HMMs</span> <span class="tag">Multimodal Data</span>
+        </div>
+    </div>
+
+    <h2>Selected Publications</h2>
+    
+    <div class="card">
+        <strong>Evaluating Personalised Beneficial Interventions in the Daily Lives of Older Adults Using a Camera</strong><br>
+        <em>Chen Long-fei, Christopher Lochhead, Robert B. Fisher, et al.</em><br>
+        International Conference on AI in Healthcare (AliH), 2025.<br>
+    </div>
+
+    <div class="card">
+        <strong>OPPH: A Vision-Based Operator for Measuring Person Body Movements in Healthcare</strong><br>
+        <em>Chen Long-fei, Subramanian Ramamoorthy, Robert B. Fisher</em><br>
+        12th International Workshop on Assistive Computer Vision and Robotics (@ECCV24), 2024.<br>
+    </div>
+
+    <div class="card">
+        <strong>Measuring Changes in Upper Body Movement Due to Fasting Using a Camera</strong><br>
+        <em>Chen Long-fei, et al.</em><br>
+        Sensors, 24(22): 7242, 2024.<br>
+    </div>
+
+    <div class="card">
+        <strong>MISO: Monitoring Inactivity of Single Older Adults at Home using RGB-D Technology</strong><br>
+        <em>Chen Long-fei, Robert B. Fisher</em><br>
+        ACM Transactions on Computing for Healthcare, 2024.<br>
+    </div>
+
+    <div class="card">
+        <strong>Modeling user behaviors in machine operation tasks for adaptive guidance</strong><br>
+        <em>Chen Long-fei, Yuichi Nakamura, and Kazuaki Kondo</em><br>
+        arXiv preprint, arXiv:2003.03025, 2020.<br>
+    </div>
+
+    <h2>Open Source Datasets</h2>
+    <div class="card">
+        <strong>Human MotionLess (HuMoLs) Dataset</strong><br>
+        A real-world dataset containing human subjects who are motionless, used for detecting inactivity or loss of consciousness.<br>
+        <a href="https://groups.inf.ed.ac.uk/vision/DATASETS/HUMOLS/" target="_blank" class="btn" style="margin-top:0.5rem; font-size:0.8rem;">View Dataset</a>
+    </div>
+    <div class="card">
+        <strong>Edinburgh Simulated Surgical Tools (RGBD)</strong><br>
+        A synthetic dataset with 2D/3D surgical tools for object recognition and pose estimation.<br>
+        <a href="https://homepages.inf.ed.ac.uk/rbf/SURGICALTOOLS/" target="_blank" class="btn" style="margin-top:0.5rem; font-size:0.8rem;">View Dataset</a>
+    </div>
+
+    <h2>News & Grants</h2>
+    <div class="card">
+        <div class="news-item">
+            <span class="date">Sep 2025</span> 
+            📄 Paper nominated for <strong>Best Paper Candidate</strong> at the Int. Conference on AI in Healthcare, Cambridge.
+        </div>
+        <div class="news-item">
+            <span class="date">May 2025</span> 
+            🏆 Won <strong>Best Presentation Award</strong> at the AI and Dementia International Workshop, Toronto.
+        </div>
+        <div class="news-item">
+            <span class="date">Dec 2024</span> 
+            💰 Awarded <strong>Moray Endowment Fund</strong> (£1.95k), University of Edinburgh.
+        </div>
+        <div class="news-item">
+            <span class="date">Feb 2024</span> 
+            💰 Awarded <strong>Wellcome Institutional Partnership Award</strong> (£5k), University of Edinburgh.
+        </div>
+    </div>
+    
+    <h2 id="contact">Get In Touch</h2>
+    <div class="contact-form">
+        <p style="margin-top: 0;">I am actively seeking new opportunities. Feel free to reach out via the form below or email me directly at <a href="mailto:kele39@gmail.com">kele39@gmail.com</a>.</p>
+        <form action="https://formspree.io/f/movgovbj" method="POST">
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Research Collaboration" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <h2 style="text-align:center;">Visitor Map</h2>
+    <div class="map-container">
+        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=u-xivdBpKfmIttoJWRsWhs34CMgZ1Hp_26LUlCUvI-M"></script>
+    </div>
+
+</div> 
+
+<footer>
+    <p>&copy; 2026 Longfei Chen. Hosted on GitHub Pages.</p>
+</footer>
+
+</body>
+</html>
