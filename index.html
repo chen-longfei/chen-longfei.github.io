@@ -91,6 +91,46 @@
             border-left: 4px solid var(--accent-color);
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
+
+        /* PROJECT LAYOUT WITH FIGURES */
+        .project-card {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .project-content {
+            flex: 1;
+        }
+        .project-figure {
+            width: 320px;
+            flex-shrink: 0;
+            background: var(--light-gray);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .project-figure img {
+            width: 100%;
+            height: 200px; /* Placeholder height */
+            object-fit: cover;
+            display: block;
+            background: #e2e8f0; /* Soft placeholder color */
+        }
+        .figure-caption {
+            font-size: 0.85rem;
+            color: #555;
+            padding: 0.6rem;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-style: italic;
+        }
         
         .news-item { margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--light-gray); }
         .news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -147,9 +187,11 @@
 
         footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .profile-section { flex-direction: column; text-align: center; align-items: center; margin-top: 0; }
             .profile-img { margin-right: 0; margin-bottom: 1.5rem; }
+            .project-card { flex-direction: column; }
+            .project-figure { width: 100%; }
             header { padding: 2rem 0; }
         }
     </style>
@@ -221,23 +263,39 @@
 
     <h2>Featured Research Projects</h2>
     
-    <div class="card">
-        <h3>Vision-Based Human Physical Behavior Analysis (2021–2025)</h3>
-        <p>
-            Developed privacy-preserving methods for sensing physical behavior in domestic environments. My work utilized RGB-D imaging, activity recognition, behavior analysis, and temporal modeling (Bayesian Networks, Gaussian Processes) to infer changes in behavioral states. Key contributions include handling real-world challenges like low lighting and moving pets to reliably detect anomalies, inactivity, and subtle functional decline.
-        </p>
-        <div class="tags">
-            <span class="tag">Human Behavior Analysis</span> <span class="tag">Temporal Modeling</span> <span class="tag">Gaussian Processes</span> <span class="tag">Anomaly Detection</span> <span class="tag">Change Point Detection</span>
+    <div class="project-card">
+        <div class="project-content">
+            <h3 style="margin-top: 0;">Vision-Based Human Physical Behavior Analysis (2021–2025)</h3>
+            <p>
+                Developed privacy-preserving methods for sensing physical behavior in domestic environments. My work utilized RGB-D imaging, activity recognition, behavior analysis, and temporal modeling (Bayesian Networks, Gaussian Processes) to infer changes in behavioral states. Key contributions include handling real-world challenges like low lighting and moving pets to reliably detect anomalies, inactivity, and subtle functional decline.
+            </p>
+            <div class="tags">
+                <span class="tag">Human Behavior Analysis</span> <span class="tag">Temporal Modeling</span> <span class="tag">Gaussian Processes</span> <span class="tag">Anomaly Detection</span> <span class="tag">Change Point Detection</span>
+            </div>
+        </div>
+        <div class="project-figure">
+            <img src="project1_plot.png" alt="Temporal modeling plots">
+            <div class="figure-caption">
+                Plot showing inferred changes in physical activity. (Part 1: Observation Sequence, Part 2: Change Point Detection).
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <h3>Analysis and Modeling of Machine Operation Tasks using Egocentric Vision (2015–2020)</h3>
-        <p>
-            Investigated operational behaviors using head-mounted cameras, IMUs, and gaze trackers. I developed methods for <strong>touch sensing</strong> and <strong>hotspot detection</strong>, and applied <strong>Modified Hidden Markov Models</strong> to model complex task sequences (repetitive, mistakes, new ways) for automatic guidance systems and user skill assessment.
-        </p>
-        <div class="tags">
-            <span class="tag">Egocentric Vision</span> <span class="tag">Activity Recognition</span> <span class="tag">HMMs</span>
+    <div class="project-card">
+        <div class="project-content">
+            <h3 style="margin-top: 0;">Analysis and Modeling of Machine Operation Tasks using Egocentric Vision (2015–2020)</h3>
+            <p>
+                Investigated operational behaviors using head-mounted cameras, IMUs, and gaze trackers. I developed methods for <strong>touch sensing</strong> and <strong>hotspot detection</strong>, and applied <strong>Modified Hidden Markov Models</strong> to model complex task sequences (repetitive, mistakes, new ways) for automatic guidance systems and user skill assessment.
+            </p>
+            <div class="tags">
+                <span class="tag">Egocentric Vision</span> <span class="tag">Activity Recognition</span> <span class="tag">HMMs</span>
+            </div>
+        </div>
+        <div class="project-figure">
+            <img src="project2_figure.png" alt="Egocentric vision process">
+            <div class="figure-caption">
+                Example of hotspot detection during complex task sequence modelling.
+            </div>
         </div>
     </div>
 
@@ -252,7 +310,7 @@
     <div class="card">
         <strong>Unobtrusive Monitoring of Physical Weakness: A Simulated Approach</strong><br>
         <em>Chen Long-fei, Muhammad Ahmed Raza, Craig Innes, Subramanian Ramamoorthy, Robert B. Fisher</em><br>
-       2024.<br>
+        , 2024.<br>
     </div>
 
     <div class="card">
